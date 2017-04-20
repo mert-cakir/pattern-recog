@@ -7,8 +7,8 @@ import com.s2t.util.MessageType;
 
 public class ErrorManager {
 
-	private static ErrorManager	em	= new ErrorManager( );
-	private static JLabel		mlbl;
+	private static ErrorManager em = new ErrorManager( );
+	private static JLabel mlbl;
 
 	private ErrorManager( ) {
 	}

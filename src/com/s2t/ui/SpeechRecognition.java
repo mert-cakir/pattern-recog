@@ -31,17 +31,17 @@ import com.s2t.file.TrainingTestingWaveFiles;
 @SuppressWarnings("serial")
 public class SpeechRecognition extends JFrame {
 
-	private JPanel				jContentPane			= null;
-	private JSoundCapture		soundCapture			= null;
-	private JComboBox<String>			wordsComboBoxAddWord	= null;
-	private JTabbedPane			jTabbedPane				= null;
-	private JPanel				trainPanel				= null;
-	private JTextField			addWordToCombo			= null;
-	private JButton				addWordToComboBtn		= null;
-	private JLabel				statusLBLRecognize;
-	private JLabel				lblChooseAWord;
-	private JLabel				aboutLBL;
-	private JLabel				lblAddANew;
+	private JPanel jContentPane = null;
+	private JSoundCapture soundCapture = null;
+	private JComboBox<String> wordsComboBoxAddWord = null;
+	private JTabbedPane jTabbedPane = null;
+	private JPanel trainPanel = null;
+	private JTextField addWordToCombo = null;
+	private JButton addWordToComboBtn = null;
+	private JLabel statusLBLRecognize;
+	private JLabel lblChooseAWord;
+	private JLabel aboutLBL;
+	private JLabel lblAddANew;
 
 	public static void main( String[] args ) {
 		try {
@@ -128,14 +128,12 @@ public class SpeechRecognition extends JFrame {
 					String newWord = Utils.clean( getAddWordToCombo( ).getText( ) );
 					boolean isAlreadyRegistered = false;
 					if ( !newWord.isEmpty( ) ) {
-						// already in combo box
 						for ( int i = 0; i < getWordsComboBoxAddWord( ).getItemCount( ); i++ ) {
 							if ( getWordsComboBoxAddWord( ).getItemAt( i ).toString( ).equalsIgnoreCase( newWord ) ) {
 								isAlreadyRegistered = true;
 								break;
 							}
 						}
-						// if not add
 						if ( !isAlreadyRegistered ) {
 							getWordsComboBoxAddWord( ).repaint( );
 							getAddWordToCombo( ).setText( "" );

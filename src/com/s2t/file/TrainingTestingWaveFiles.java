@@ -6,40 +6,10 @@ import java.util.List;
 
 public class TrainingTestingWaveFiles {
 
-	protected List< String >	folderNames;
-	protected File[][]			waveFiles;
-	protected File				wavPath;
+	protected List< String > folderNames;
+	protected File[][] waveFiles;
+	protected File wavPath;
 
-	/**
-	 * MAKE SURE THAT Files are/will be in this folder structure the folder
-	 * structure for training : 
-	 * 
-	 * (Selected)DBROOTFOLDER\
-	 * 
-	 * \speechTrainWav\\apple\\apple01.wav 
-	 * 
-	 * \speechTrainWav\\apple\\apple02.wav
-	 * 
-	 * \speechTestWav\\cat\\cat01.wav 
-	 * 
-	 * \speechTestWav\\cat\\cat01.wav
-	 * 
-	 * \speechTestWav\\cat\\cat01.wav 
-	 * 
-	 * \speakerTrainWav\\userA\\userA1.wav
-	 * 
-	 * \codeBook\\codeBook.cbk 
-	 * 
-	 * \models\\HMM\\apple.hmm \models\\HMM\\cat.hmm
-	 * 
-	 */
-
-	/**
-	 * constructor, sets the wavFile path according to the args supplied
-	 * 
-	 * @param hmmOrGmm
-	 * @param testOrTrain
-	 */
 	public TrainingTestingWaveFiles( String testOrTrain ) {
 		if ( testOrTrain.equalsIgnoreCase( "test" ) ) {
 			setWavPath( new File( "TestWav" ) );
@@ -50,8 +20,7 @@ public class TrainingTestingWaveFiles {
 	}
 
 	private void readFolder( ) {
-		//		System.out.println(getWavPath().getAbsolutePath());
-		folderNames = Arrays.asList( getWavPath( ).list( ) );// must return only folders
+		folderNames = Arrays.asList( getWavPath( ).list( ) );
 	}
 
 	public List< String > readWordWavFolder( ) {

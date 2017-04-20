@@ -12,14 +12,14 @@ import javax.sound.sampled.AudioSystem;
 
 public class WaveData {
 
-	private byte[]					arrayFile;
-	private byte[]					audioBytes;
-	private float[]					audioData;
-	private FileOutputStream		fileOS;
-	private ByteArrayInputStream	byteAIS;
-	private AudioInputStream		audioIS;
-	private AudioFormat				audioFormat;
-	private double					durationSeconds;
+	private byte[] arrayFile;
+	private byte[] audioBytes;
+	private float[] audioData;
+	private FileOutputStream fileOS;
+	private ByteArrayInputStream byteAIS;
+	private AudioInputStream audioIS;
+	private AudioFormat audioFormat;
+	private double durationSeconds;
 	private FileInputStream fis;
 
 	public WaveData( ) {

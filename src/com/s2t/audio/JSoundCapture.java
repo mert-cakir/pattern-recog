@@ -44,28 +44,28 @@ import com.s2t.util.MessageType;
 
 public class JSoundCapture extends JPanel implements ActionListener {
 
-	private static final long	serialVersionUID	= 1L;
-	byte[]						audioBytes			= null;
-	float[]						audioData			= null;
-	final int					BUFFER_SIZE			= 16384;
-	int							counter				= 0;
-	FormatControlConf			formatControls		= new FormatControlConf( );
-	Capture						capture				= new Capture( );
-	Playback					playback			= new Playback( );
-	WaveData					wd;
-	AudioInputStream			audioInputStream;
-	SamplingGraph				samplingGraph;
-	JButton						playB, captB, pausB;
-	JButton						saveB;
-	String						errStr;
-	double						duration, seconds;
-	File						file;
-	Vector< Line2D.Double >		lines				= new Vector< Line2D.Double >( );
-	boolean						isDrawingRequired;
-	boolean						isSaveRequired;
-	JPanel						innerPanel;
-	String						saveFileName		= null;
-	String						fileName			= null;
+	private static final long serialVersionUID = 1L;
+	byte[] audioBytes = null;
+	float[] audioData = null;
+	final int BUFFER_SIZE = 16384;
+	int counter = 0;
+	FormatControlConf formatControls = new FormatControlConf( );
+	Capture capture = new Capture( );
+	Playback playback = new Playback( );
+	WaveData wd;
+	AudioInputStream audioInputStream;
+	SamplingGraph samplingGraph;
+	JButton playB, captB, pausB;
+	JButton saveB;
+	String errStr;
+	double duration, seconds;
+	File file;
+	Vector< Line2D.Double > lines = new Vector< Line2D.Double >( );
+	boolean isDrawingRequired;
+	boolean isSaveRequired;
+	JPanel innerPanel;
+	String saveFileName = null;
+	String fileName = null;
 
 	public JSoundCapture( boolean isDrawingRequired, boolean isSaveRequired ) {
 		wd = new WaveData( );
@@ -288,8 +288,8 @@ public class JSoundCapture extends JPanel implements ActionListener {
 
 	public class Playback implements Runnable {
 
-		SourceDataLine	line;
-		Thread			thread;
+		SourceDataLine line;
+		Thread thread;
 
 		public void start( ) {
 			errStr = null;
@@ -391,8 +391,8 @@ public class JSoundCapture extends JPanel implements ActionListener {
 
 	class Capture implements Runnable {
 
-		TargetDataLine	line;
-		Thread			thread;
+		TargetDataLine line;
+		Thread thread;
 
 		public void start( ) {
 			errStr = null;
@@ -503,11 +503,11 @@ public class JSoundCapture extends JPanel implements ActionListener {
 
 		private static final long	serialVersionUID	= 1L;
 
-		private Thread				thread;
-		private Font				font12				= new Font( "serif", Font.PLAIN, 12 );
-		Color						jfcBlue				= new Color( 204, 204, 255 );
-		Color						pink				= new Color( 255, 175, 175 );
-		AudioFormat					format;
+		private Thread thread;
+		private Font font12 = new Font( "serif", Font.PLAIN, 12 );
+		Color jfcBlue = new Color( 204, 204, 255 );
+		Color pink = new Color( 255, 175, 175 );
+		AudioFormat format;
 
 		public SamplingGraph( ) {
 			setBackground( new Color( 20, 20, 20 ) );
